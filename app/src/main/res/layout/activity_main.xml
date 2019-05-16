@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:onClick="startSecondActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GripperArm"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <org.ros.android.view.RosTextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dip" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:max="566" />
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1º Ang:0"
+        android:textSize="24sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:max="336" />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2º Ang:0"
+        android:textSize="24sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:max="232" />
+
+    <TextView
+        android:id="@+id/num3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3º Ang:0"
+        android:textSize="24sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:max="383" />
+
+    <TextView
+        android:id="@+id/num4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4º Ang:0"
+        android:textSize="24sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:max="300" />
+
+    <TextView
+        android:id="@+id/num5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5º Ang:0"
+        android:textSize="24sp" />
+
+</LinearLayout>
