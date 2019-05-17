@@ -50,4 +50,22 @@
         android:layout_centerHorizontal="true"
         android:textColor="#ffffffff" />
 
+    <EditText
+        android:id="@+id/editTextNode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="edNode"
+        tools:text="android_sensors_driver_imu" />
+
+    <EditText
+        android:id="@+id/editTextTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="edTopic"
+        tools:text="android/imu" />
+
 </LinearLayout>

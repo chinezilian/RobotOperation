@@ -34,17 +34,12 @@ public class Main2Activity extends RosActivity  {
     private LocationManager mLocationManager;
     private SensorManager mSensorManager;
 
-    private String node_name;
+
     public Main2Activity() {
         super("RobotOperation", "RobotOperation");
-        node_name = String.valueOf(Splash.text.getText());
     }
 
-    public  Main2Activity(String node)
-    {
-        this();
-        node_name = node;
-    }
+
 
     @Override
     protected void onPause()
@@ -152,7 +147,9 @@ public class Main2Activity extends RosActivity  {
 
         NodeConfiguration nodeConfiguration3 = NodeConfiguration.newPublic(InetAddressFactory.newNonLoopback().getHostAddress());
         nodeConfiguration3.setMasterUri(getMasterUri());
-        nodeConfiguration3.setNodeName("android_sensors_driver_"+node_name);
+        String snode=Main3Activity.edNode.getText().toString();
+        nodeConfiguration3.setNodeName(snode);
+       // nodeConfiguration3.setNodeName("android_sensors_driver_imu1");
         this.imu_pub = new ImuPublisher(mSensorManager);
         nodeMainExecutor.execute(this.imu_pub, nodeConfiguration3);
 

@@ -59,18 +59,7 @@ public class ImuPublisher implements NodeMain
   private SensorListener sensorListener;
   private SensorManager sensorManager;
   private Publisher<Imu> publisher;
-	private String topic_name, node_name;
-
-	public ImuPublisher() {
-		topic_name = String.valueOf(Splash.text.getText());
-	}
-
-	public ImuPublisher(String topic, String node)
-	{
-		topic_name = topic;
-		node_name = node;
-	}
-
+  
   private class ImuThread extends Thread
   {
 	  private final SensorManager sensorManager;
@@ -219,7 +208,9 @@ public class ImuPublisher implements NodeMain
   {
 	  try
 	  {
-			this.publisher = node.newPublisher(topic_name, "sensor_msgs/Imu");
+	  	  String stopic=Main3Activity.edTopic.getText().toString();
+		  this.publisher = node.newPublisher(stopic, "sensor_msgs/Imu");
+//		  this.publisher = node.newPublisher("android/imu", "sensor_msgs/Imu");
 			// 	Determine if we have the various needed sensors
 			boolean hasAccel = false;
 			boolean hasGyro = false;

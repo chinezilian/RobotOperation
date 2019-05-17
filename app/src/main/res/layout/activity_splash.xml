@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="#000">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="100sp" />
 
     <TextView
         android:id="@+id/titulo"
@@ -15,56 +20,5 @@
         android:textAlignment="center"
         android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="100sp" />
-
-    <TextView
-        android:id="@+id/topic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="topic"
-        android:textColor="#fff"
-        android:textAlignment="center"
-        android:textSize="40sp" />
-
-    <EditText
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="Nome do topico"
-        android:textColor="#fff"
-        android:inputType="textPersonName"
-        android:textSize="36sp" />
-    <TextView
-        android:id="@+id/node"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="node"
-        android:textColor="#fff"
-        android:textAlignment="center"
-        android:textSize="40sp" />
-    <EditText
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="Nome do topico"
-        android:textColor="#fff"
-        android:inputType="textPersonName"
-        android:textSize="36sp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:onClick="startFirstActivity"
-        android:text="START"
-        android:textAlignment="center"
-        android:textSize="24sp" />
 
 </LinearLayout>

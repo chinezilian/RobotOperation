@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.ros.android.RosActivity;
@@ -17,6 +18,7 @@ import org.ros.node.NodeConfiguration;
 import org.ros.node.NodeMainExecutor;
 
 public class Main3Activity extends RosActivity {
+    public static EditText edNode,edTopic;
     static TextView statusMessage;
     static TextView counterMessage;
     static ConnectionThread connect;
@@ -28,8 +30,11 @@ public class Main3Activity extends RosActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        edNode=(EditText)findViewById(R.id.editTextNode);
+        edTopic=(EditText)findViewById(R.id.editTextTopic);
         statusMessage = (TextView) findViewById(R.id.statusMessage);
         counterMessage = (TextView) findViewById(R.id.counterMessage);
     BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -128,6 +133,7 @@ public class Main3Activity extends RosActivity {
 
         connect.write("restart\n".getBytes());
     }
+
     public void startThirdActivity(View view) {
 
         Intent thirdActivity = new Intent(this, Main2Activity.class);
