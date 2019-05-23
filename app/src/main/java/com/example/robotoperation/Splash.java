@@ -21,7 +21,7 @@ public class Splash extends Activity {
             public void run() {
                 // Esse método será executado sempre que o timer acabar
                 // E inicia a activity principal
-                Intent secondActivity = new Intent(Splash.this, MainActivity.class);
+                Intent secondActivity = new Intent(Splash.this, Main3Activity.class);
                 startActivity(secondActivity);
 
                 // Fecha esta activity

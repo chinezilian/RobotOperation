@@ -1,6 +1,5 @@
 package com.example.robotoperation;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Camera;
@@ -24,9 +23,9 @@ import org.ros.node.NodeMainExecutor;
 
 public class Main2Activity extends RosActivity  {
 
-    private int cameraId = 0;
+   /* private int cameraId = 0;
     private RosCameraPreviewView rosCameraPreviewView;
-    private Handler handy = new Handler();
+    private Handler handy = new Handler();*/
 
     private NavSatFixPublisher fix_pub;
     private ImuPublisher imu_pub;
@@ -46,7 +45,7 @@ public class Main2Activity extends RosActivity  {
     {
         super.onPause();
     }
-
+/*
     Runnable sizeCheckRunnable = new Runnable() {
         @Override
         public void run() {
@@ -59,15 +58,15 @@ public class Main2Activity extends RosActivity  {
         }
     };
 
-
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       // requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main2);
-        rosCameraPreviewView = (RosCameraPreviewView) findViewById(R.id.ros_camera_preview_view);
+        //rosCameraPreviewView = (RosCameraPreviewView) findViewById(R.id.ros_camera_preview_view);
 
         mLocationManager = (LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
         mSensorManager = (SensorManager)this.getSystemService(SENSOR_SERVICE);
@@ -133,12 +132,12 @@ public class Main2Activity extends RosActivity  {
 
     @Override
     protected void init(NodeMainExecutor nodeMainExecutor) {
-        NodeConfiguration nodeConfiguration =
+  /*      NodeConfiguration nodeConfiguration =
                 NodeConfiguration.newPublic(InetAddressFactory.newNonLoopback().getHostAddress());
         nodeConfiguration.setMasterUri(getMasterUri());
         nodeMainExecutor.execute(rosCameraPreviewView, nodeConfiguration);
         handy.post(sizeCheckRunnable);
-
+*/
         NodeConfiguration nodeConfiguration2 = NodeConfiguration.newPublic(InetAddressFactory.newNonLoopback().getHostAddress());
         nodeConfiguration2.setMasterUri(getMasterUri());
         nodeConfiguration2.setNodeName("android_sensors_driver_nav_sat_fix");
